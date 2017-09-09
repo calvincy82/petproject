@@ -1,0 +1,13 @@
+com\calvin\login\example\dao\PersonRepository.class
+com\calvin\login\example\dao\ProductPersonRepository.class
+com\calvin\login\example\config\ApplicationConfiguration$1.class
+com\calvin\login\example\controller\MainController.class
+com\calvin\login\example\service\LoginServiceImpl.class
+com\calvin\login\example\model\PersonEntity.class
+com\calvin\login\example\config\SpringWebAppInitializer.class
+com\calvin\login\example\config\ApplicationConfiguration.class
+com\calvin\login\example\model\ProductPersonEntity.class
+com\calvin\login\example\service\PersonServiceImpl.class
+com\calvin\login\example\dao\ProductRepository.class
+com\calvin\login\example\model\ProductEntity.class
+com\calvin\login\example\config\SpringWebMvcConfiguration.class
