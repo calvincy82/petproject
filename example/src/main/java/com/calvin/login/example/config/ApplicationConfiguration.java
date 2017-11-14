@@ -79,4 +79,17 @@ public class ApplicationConfiguration {
 			}
 		};
 	}
+	
+	 @Bean
+    	public static PropertySourcesPlaceholderConfigurer propertySourcesPlaceholderConfigurer() throws IOException {
+        PropertySourcesPlaceholderConfigurer ppc = new PropertySourcesPlaceholderConfigurer();
+        ppc.setLocalOverride(true);
+        String externalPropertiesPath = System.getProperty("external.prop");
+        L.debug("external.prop: {}", externalPropertiesPath);
+        Path p = Paths.get(externalPropertiesPath);
+        if (Files.exists(p) && Files.isDirectory(p) && Files.isReadable(p)) {
+            ppc.setLocations(new PathMatchingResourcePatternResolver().getResources(p.toUri().toString() + "sc/**/*.properties"));
+        }
+        return ppc;
+    }
 }
